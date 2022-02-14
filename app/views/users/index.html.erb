@@ -4,6 +4,7 @@
 <p>
   お名前：<%= user.name %>
   年齢：<%= user.age %>
+  <%= link_to "編集", "/users/#{user.id}/edit", method: :get %>
   <%= link_to "削除", "/users/#{user.id}", method: :delete, data: {confirm: "削除してもよろしいですか？"}  %>
 </p>
 <% end %>
