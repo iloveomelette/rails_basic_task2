@@ -1,0 +1,8 @@
+<h1>投稿一覧</h1>
+<%= link_to "投稿画面へ", "/users/new" %>
+<% @user.each do |user| %>
+<p>
+  お名前：<%= user.name %>
+  年齢：<%= user.age %>
+</p>
+<% end %>
