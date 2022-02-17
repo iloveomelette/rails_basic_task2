@@ -1,10 +1,10 @@
 <h1>投稿一覧</h1>
-<%= link_to "投稿画面へ", "/users/new" %>
+<%= link_to "投稿画面へ", new_user_path %>
 <% @user.each do |user| %>
 <p>
   お名前：<%= user.name %>
   年齢：<%= user.age %>
-  <%= link_to "編集", "/users/#{user.id}/edit", method: :get %>
-  <%= link_to "削除", "/users/#{user.id}", method: :delete, data: {confirm: "削除してもよろしいですか？"}  %>
+  <%= link_to "編集", edit_user_path(user), method: :get %>
+  <%= link_to "削除", user_path(user), method: :delete, data: {confirm: "削除してもよろしいですか？"}  %>
 </p>
 <% end %>
